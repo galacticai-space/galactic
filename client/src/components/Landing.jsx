@@ -37,21 +37,21 @@ function SocialIcons() {
       {/* Increased gap to 16 for more spacing */}
       <a href="#" className="hover:opacity-80 transition-opacity">
         <img 
-          src="https://galaxyrailway-production.up.railway.app/textures/TweetX.png" 
+          src="https://galactic-production.up.railway.app/textures/TweetX.png" 
           alt="Twitter Icon" 
           style={{ width: '35px', height: '20px' }} // Set to 35px for a smaller size
         />
       </a>
       <a href="#" className="hover:opacity-80 transition-opacity">
         <img 
-          src="https://galaxyrailway-production.up.railway.app/textures/ndex.png" 
+          src="https://galactic-production.up.railway.app/textures/ndex.png" 
           alt="Dex Icon" 
           style={{ width: '60px', height: '45px' }} // Set to 60px for a smaller size
         />
       </a>
       <a href="#" className="hover:opacity-80 transition-opacity">
         <img 
-          src="https://galaxyrailway-production.up.railway.app/textures/notess-removebg-preview.png" 
+          src="https://galactic-production.up.railway.app/textures/notess-removebg-preview.png" 
           alt="Notes Icon" 
           style={{ 
             width: '20px', // Set to 35px for a smaller size
