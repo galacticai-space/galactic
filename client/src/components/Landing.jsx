@@ -24,9 +24,9 @@ export default function LandingPage() {
 function Logo() {
   return (
     <div className="text-3xl font-bold text-white">
-      <span className="text-blue-200">Cel</span>
-      <span className="text-indigo-200">est</span>
-      <span className="text-purple-200">ia</span>
+      <span className="text-blue-200">Gal</span>
+      <span className="text-indigo-200">ac</span>
+      <span className="text-purple-200">tic</span>
     </div>
   )
 }
