@@ -90,6 +90,28 @@ const Universe = () => {
   const allTransactionsRef = useRef(new Set());
   const galaxyPositionsRef = useRef(new Map());
 
+  useEffect(() => {
+    // Check both if it's first time ever AND first load this session
+    const firstTimeEver = !localStorage.getItem('hasLoadedBefore');
+    const hasReloadedThisSession = sessionStorage.getItem('hasReloadedThisSession');
+    
+    if (!hasReloadedThisSession) {
+      // Set both flags
+      localStorage.setItem('hasLoadedBefore', 'true');
+      sessionStorage.setItem('hasReloadedThisSession', 'true');
+      localStorage.setItem('skipWelcome', 'true');
+      
+      // Wait for initial load then reload
+      const reloadTimer = setTimeout(() => {
+        window.location.reload();
+      }, 2500);
+  
+      return () => clearTimeout(reloadTimer);
+    }
+  }, []);
+
+
+
   const checkBounds = (position) => {
     const universeRadius = selectedGalaxy ? 40 : 2400;
     const distance = Math.sqrt(position.x * position.x + position.z * position.z);
@@ -538,6 +560,8 @@ const handleKeyDown = useCallback((e) => {
     wsRef.current = ws;
   
     // Cleanup function
+
+
     return () => {
       if (ws.readyState === WebSocket.OPEN) {
         ws.close(1000, 'Component unmounting');
@@ -881,6 +905,8 @@ const handleKeyDown = useCallback((e) => {
         console.log('Galaxy transactions:', selectedGalaxy.transactions.length);
       }
     }, [selectedGalaxy, galaxies]);
+
+  
 
 
    
