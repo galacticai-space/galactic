@@ -1176,21 +1176,24 @@ const handleKeyDown = useCallback((e) => {
         {/* Status Info */}
         {
         <div style={{ 
-          position: 'absolute', 
           bottom: '5rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 10,
-          color: 'white',
-          background: 'rgba(0,0,0,0.7)',
-          padding: '0.75rem 1.5rem',
-          borderRadius: '0.5rem',
-          fontFamily: 'monospace',
-          fontSize: '1.1rem',
-          maxWidth: '80%',
-          textAlign: 'center',
-          opacity: statusInfo ? 1 : 0,
-          transition: 'opacity 0.3s ease'
+    left: '50%',
+    transform: 'translateX(-50%)',
+    zIndex: 10,
+    color: 'white',
+    background: 'rgba(0,0,0,0.7)',
+    padding: '0.75rem 1.5rem',
+    borderRadius: '0.5rem',
+    fontFamily: 'monospace',
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    msUserSelect: 'none',
+    fontSize: '1.1rem',
+    maxWidth: '80%',
+    textAlign: 'center',
+    opacity: statusInfo ? 1 : 0,
+    transition: 'opacity 0.3s ease'
         }}>
           {statusInfo}
         </div>
